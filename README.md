@@ -2,7 +2,7 @@
 A simple implementation of the standard RSA algorithm for asymmetric key cryptography. Note that this implementation is secure, but the protocol one uses can be insecure. In particular it is possible to carry out the following Chosen Chipertext Attack against RSA (which is an attack against the protocol and not against the standard algorithm):
 - An evesdropper $E$ monitoring the comunication between $A$ and $B$ manages to get a ciphertext $c$;
 - $E$ would like to recover the message $m=c^d$ where $d$ is the (hard) inverse of the public key $e$ of $A$ (mod $(n=(p-1)(q-1))$ as in the standard RSA algorithm); 
-- To recover $m$ choose a random number $r<n$, get the public key $e$ and compute $x=r^e mod(n)$;
+- To recover $m$ choose a random number $r < n$, get the public key $e$ and compute $x=r^e$ mod$(n)$;
 - Compute $y=xc$ mod$(n)$ and $t=r^{-1}$ mod$(n)$;
 - If $x=r^e$ mod$(n)$, then $r=x^d$ mod$(n)$;
 - At this point $E$ gets $A$ to sign $y$ with the private key, thereby decrypting $y$ so $E$ recieves from $A$ the message $u=y^d$ mod$(n)$;
