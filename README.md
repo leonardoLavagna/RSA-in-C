@@ -13,4 +13,4 @@ The point here is that $A$ signs the message and not the hash of the message. Th
 ### What's in here?
 Here you can find the standard implementation in C of the RSA algorithm. To execute the code either run it online, e.g. here: https://onlinegdb.com/sjXC-t22a or use the command line, typically the following commands should work: 
 - `gcc -<programName>.c` wich will compile the file `<programName.c>` and produce the output file `a.out`
-- `./a wich will execute the code obtained in the previous point.
+- `./a` wich will execute the code obtained in the previous point.
